@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Material Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css" integrity="sha512-hj9rznBPdFg9A4fACbJcp4ttzdinMDtPrtZ3gBD11DiY3O1xJfn0r1U5so/J0zwfGOzq9teIaH5rFmjFAFw8SA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <style>
+        *,*::after, *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .carousel-item{
+            min-height: 100vh;
+            background-position: cover;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .carousel-item::before{
+          content: '';
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.4);
+          z-index: -1;
+        }
+
+     
+
+        .carousel-item .container{
+           position: absolute;
+           left: 50%;
+           top: 50%;
+           transform: translate(-50%, -50%);
+           text-align: center;
+        }
+
+        .carousel-item h2 {
+            font-size: 80px;
+            color: #ffffff;
+            margin: 0 10px;
+            opacity: 0;
+        }
+
+        .carousel-item p {
+            color: #a09f9f;
+            margin: 0;
+            opacity: 0;
+        }
+
+        .name h2 {
+            font-size: 4em;
+            white-space: nowrap;
+        }
+
+        .name p {
+            color: #ffffff;
+            font-size: 2em;
+            margin: 0;
+            opacity: 0;
+        }
+
+        .name i {
+            width: 30px;
+            line-height: 30px;
+            color: white;
+            margin: 2px;
+            font-size: 1.3em;
+            display: inline-block;
+            border-radius: 50%;
+            box-shadow: 0px 0px 2px 2px #fff;
+            border: 2px solid transparent;
+        }
+
+        em {
+            font-style: normal;
+            font-size: 0.7em;
+            color: #ccc;
+        }
+
+        .carousel-item.active h2 {
+            animation: fadeInLeft 0.5s ease forwards;
+        }
+
+        .carousel-item.active p {
+            animation: fadeInRight 0.5s ease forwards;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            left: 50%;
+            bottom: 40px;
+            z-index: 10;
+            transform: translateX(-50%);
+        }
+
+        .carousel-indicators {
+            position: relative;
+            margin: 0;
+        }
+
+        .main .carousel-indicators button {
+            width: 60px;
+            height: 60px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 2px solid transparent;
+            transition: all 0.3s linear;
+        }
+
+        .carousel-indicators button.active {
+            box-shadow: 0 0 10px #ffffff;
+            transform: scale(1.2);
+        }
+
+        .carousel-control-prev, 
+        .carousel-control-next {
+            height: 60px;
+            width: 60px;
+            background-color: rgba(0, 0, 0, 0.521);
+            opacity: 1;
+            z-index: 3;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+        }
+
+        .carousel-control-prev {
+            left: -80%;
+        }
+
+        .carousel-control-next {
+            right: -80%;
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .carousel-control-next, 
+            .carousel-control-prev {
+                display: none;
+            }
+            .carousel-indicators button {
+                height: 60px;
+                width: 60px;
+            }
+
+            .carousel-item h2 {
+                font-size: 45px;
+            }
+
+            .carousel-item p {
+                font-size: 22px;
+            }
+        }
+</style>
+<body>
+    <section class="home main">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-controls">
+
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-image: url('https://user-images.githubusercontent.com/78242022/284521122-c721f2b2-9ba1-49f9-8dc3-65fc142539f9.jpg');"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="background-image: url('https://user-images.githubusercontent.com/78242022/284521137-4e4c6ed9-1a9a-4ac6-9c12-4b76136e939e.jpg');"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="background-image: url('https://user-images.githubusercontent.com/78242022/284521170-9dbfb006-ba8a-4250-9a7c-dfd376291999.jpg');"></button>
+            </div>
+
+            <!-- carousel-controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="background-image: url('https://user-images.githubusercontent.com/78242022/284521122-c721f2b2-9ba1-49f9-8dc3-65fc142539f9.jpg');">
+                <div class="container">
+                    <div class="name">
+                    <h2>Ijeoma Okafor</h2>
+                    <p>Dancer<em>@IJ-dance</em></p>
+                    <div class="icons">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item" style="background-image: url('https://user-images.githubusercontent.com/78242022/284521137-4e4c6ed9-1a9a-4ac6-9c12-4b76136e939e.jpg');">
+                <div class="container">
+                    <div class="name">
+                    <h2>Lois French</h2>
+                    <p>Tourist<em>@LoisFrenchGuides</em></p>
+                    <div class="icons">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="carousel-item" style="background-image: url('https://user-images.githubusercontent.com/78242022/284521170-9dbfb006-ba8a-4250-9a7c-dfd376291999.jpg');">
+                <div class="container">
+                    <div class="name">
+                    <h2>Alex Beckham</h2>
+                    <p>Fashion Designer/CEO <em>@BeckhamStudio</em></p>
+                    <div class="icons">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    </div>
+                </div>
+              </div>
+              
+            
+            </div>
+            
+          </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  </body>
+</html>
+

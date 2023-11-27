@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Owl Bootstrap demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+    <style>
+      *, *::before, ::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --amber1:rgb(255 251 235);
+        --amber4:rgb(251 191 36);
+        --amber10:rgb(69 26 3);
+        
+      }
+
+      body {
+        background: #eee;
+        overflow: hidden;
+      }
+
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1000px;
+        height: 600px;
+        box-shadow: 0 33px 44px var(--amber1);
+      }
+
+      .container .slide .item {
+          width: 200px;
+          height: 300px;
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+          border-radius: 20px;
+          box-shadow: 0 3px 44px rgb(214 211 209);
+          background-position: 50% 50%;
+          background-size: cover;
+          display: inline-block;
+          transition: 0.5s;
+      }
+      
+      .slide .item:nth-child(1),
+      .slide .item:nth-child(2) {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .slide .item:nth-child(3){
+        left: 50%;
+      }
+
+      .slide .item:nth-child(4){
+        left: calc(50% + 220px);
+      }
+
+      .slide .item:nth-child(5){
+        left: calc(50% + 440px);
+      }
+
+      .slide .item:nth-child(n+6){
+        left: calc(50% + 660px);
+        opacity: 0;
+      }
+
+      .item .content {
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        width: 300px;
+        text-align: left;
+        color: #eee;
+        transform: translate(0, -50%);
+        font-family: 'calibri';
+        display: none;
+      }
+
+      .slide .item:nth-child(2) .content {
+        display: block;
+      }
+
+      .content .title {
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: bold;
+        opacity: 0;
+        animation: fades 1s ease-in-out 1 forwards;
+      }
+
+      .price {
+        color: var(--amber4);
+        background-color: var(--amber10);
+        width: fit-content;
+        padding: 5px;
+        border-radius: 10px;
+      }
+
+      .content .info {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fades 1s ease-in-out 0.3s 1 forwards;
+      }
+
+      div.info {
+        border-left: 2px solid var(--amber4);
+        padding: 0 10px;
+      }
+
+      .hero-btn {
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0;
+        animation: fades 1s ease-in-out 0.6s 1 forwards;
+        border-radius: 10px;
+        background-color: var(--amber4);
+        transition: 0.3s;
+      }
+
+      .hero-btn:hover {
+        background-color: var(--amber1);
+      }
+
+
+      @keyframes fades {
+        from {
+          opacity: 0;
+          transform: translate(0, 100px);
+          filter: blur(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translate(0);
+          filter: blur(0);
+        }
+      } 
+
+      .btn-wrapper {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 20px;
+      }
+
+      .btn-wrapper button {
+        background-color: var(--amber4);
+        border: 0;
+        width: 40px;
+        height: 35px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 0 5px;
+        transition: 0.3s;
+      }
+
+      .btn-wrapper button:hover {
+        background-color: var(--amber1);
+      }
+
+      @media (max-width: 576px) { 
+        .item .content {
+        left: 280px;
+        width: 200px;
+      }
+
+      .content .title {
+        font-size: 25px;
+      }
+      }
+    </style>
+
+    <!-- 
+        Matte gray Tesla Model Y
+     -->
+<body>
+  <div class="container">
+    <div class="slide">
+      <div class="item" style="background-image: url(https://user-images.githubusercontent.com/78242022/285640893-8fbd71e5-9b2c-43f4-b6ba-aec52f3d51ee.jpg);"><!--Long View Interior Designer dark-->
+        <div class="content">
+          <div class="title">Interior</div>
+          <div class="info">With an elevated seating position and low dash, the driver has a commanding view of the road ahead. The interior of Model Y is simple and clean, with a 15-inch touch screen, immersive sound system and an expansive all-glass roof that creates extra headroom and provides a seamless view of the sky. Compare Models</div>
+          <button class="hero-btn">Order Now <i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+       
+      </div><!--item 1-->
+
+      <div class="item" style="background-image: url(https://user-images.githubusercontent.com/78242022/285640912-53f76203-5bfb-4e5d-a453-eee0f2bb6caa.jpg);"><!--Full black Tesla Car-->
+        <div class="content">
+          <div class="title">Model Y - Matte gray</div>
+          <p class="info price">Lease starting at $399/mo*</p>
+          <div class="info">Model Y is fully electric, so you never need to visit a gas station again. If you charge overnight at home, you can wake up to a full battery every morning.</div>
+          <button class="hero-btn">Order Now <i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div><!--item 2-->
+
+      <div class="item" style="background-image: url(https://user-images.githubusercontent.com/78242022/285640919-a5144239-7062-44d9-8f6c-c733bce53a7d.jpg);"><!--Touch Screen Navigator-->
+        <div class="content">
+          <div class="title">Touch Screen</div>
+        <div class="info">A 15-inch touch screen, immersive sound system and an expansive all-glass roof that creates extra headroom and provides a seamless view of the sky. Compare Models</div>
+        <button class="hero-btn">Order Now <i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div><!--item 3-->
+
+      <div class="item" style="background-image:url(https://user-images.githubusercontent.com/78242022/285640904-36f68f6b-0a69-41cf-b881-27b0130b5f32.jpg);"><!--Self Driving Monitor View-->
+        <div class="content">
+          <div class="title">Panoramic Views</div>
+          <div class="info">Our all-glass roof makes the cabin feel open and airy, complete with extra headroom and unobstructed views of land and sky. Layers of acoustic glass provide a quiet ride as well as protection from glare, heat and UV rays—even on hot days.</div>
+          <button class="hero-btn">Order Now <i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div><!--item 4-->
+
+      <div class="item" style="background-image:url(https://user-images.githubusercontent.com/78242022/285645398-c1c1eec5-4e16-4a68-9216-b555264e7c10.jpg);"><!--Light Out door View-->
+        <div class="content">
+          <div class="title">Go Anywhere</div>
+          <div class="info">When you’re on the road, it’s easy to plug in along the way—at any public station or with the Tesla charging network. We currently have over 50,000 Superchargers worldwide, with six new locations opening every week.</div>
+          <button class="hero-btn">Order Now <i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div><!--item 5 -->
+
+      <div class="item" style="background-image: url(https://user-images.githubusercontent.com/78242022/285640916-492ccb0b-0bbc-4ff1-a24a-ef7c54fa8c0a.jpg);"><!--Steering Wheel View-->
+        <div class="content">
+          <div class="title">Driver Wheel</div>
+          <div class="info">Autopilot's advanced safety and convenience features are designed to assist you with the most burdensome parts of driving. Tesla Vision detects nearby cars, helps prevent potential collisions and assists with parking</div>
+          <button class="hero-btn">Order Now <i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div><!--item 6-->
+    </div>
+
+    <div class="btn-wrapper">
+      <button class="prev"><i class="fa-solid fa-angle-left"></i></button>
+      <button class="next"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+  </div>
+<script>
+    const next = document.querySelector('.next')
+    const prev = document.querySelector('.prev')
+
+    next.addEventListener('click', function(){
+      let items = document.querySelectorAll('.item')
+      document.querySelector('.slide').appendChild(items[0])
+    })
+
+    prev.addEventListener('click', function(){
+      let items = document.querySelectorAll('.item')
+      document.querySelector('.slide').prepend(items[items.length - 1])
+    })
+</script>
+  </body>
+</html>

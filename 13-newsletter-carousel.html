@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <style>
+        *,*::after, *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+</style>
+<body class="">
+    <main>
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active text-bg-primary" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="text-bg-primary"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="text-bg-primary"></button>
+            </div>
+
+            <div class="container my-5">
+                <div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded-2">
+                        <svg class="bi px-2" width="2em" height="2em" class="">
+                            <symbol id="collection" viewBox="0 0 16 16">
+                                <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
+                            </symbol>
+                            <use xlink:href="#collection"></use>
+                        </svg>
+                    </div>
+                <h1 class="text-body-emphasis">Get on board! Join our 142,416 subscribers!</h1>
+
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                <p class="col-lg-6 mx-auto mb-4">
+                    "Stay Ahead of the Curve!"  embodies the essence of being proactive and innovative, encouraging readers to anticipate trends
+                </p>
+                </div><!--End of Carousel-Item-->
+
+                <div class="carousel-item active">
+                    <p class="col-lg-6 mx-auto mb-4">
+                        "Your Weekly Dose of Inspiration!" - This catchphrase positions the newsletter as a source of motivation and encouragement. 
+                    </p>
+                </div><!--End of Carousel-Item-->
+
+                <div class="carousel-item active">
+                    <p class="col-lg-6 mx-auto mb-4">
+                        "Unlock Your Potential!" - This catchphrase speaks to personal and professional growth, inviting readers to explore.
+                    </p>
+                </div><!--End of Carousel-Item-->
+                </div>
+                <div class="row g-3 d-flex flex-row justify-content-center align-items-center">
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter Your Email here" value="" required>
+    
+                  <button class="btn btn-primary px-5 mb-5 col-sm-3" type="button">
+                    Subscriber
+                  </button>
+                </div>
+                <p class="col-lg-6 mx-auto mb-4">
+                    No spam. No charge. Just curated emails.
+                </p>
+                </div>
+              </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <i class="fa-solid fa-chevron-left text-bg-primary text-light py-2 px-2 rounded"></i>
+              <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <i class="fa-solid fa-chevron-right text-bg-primary text-light py-2 px-2 rounded"></i>
+              <span class="carousel-control-next-icon visually-hidden" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  </body>
+</html>

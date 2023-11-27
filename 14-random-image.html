@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <style>
+.carousel-indicators {
+        background-color: rgba(0, 0, 0, 0.473);
+        border-radius: 10px;
+        padding: 0;
+        box-sizing: border-box;
+        margin: 0;
+        justify-content: space-around;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        background-color:transparent;
+        transition: all 0.5s ease;
+        margin: 0;
+        padding: 0;
+    }
+
+    .carousel-indicators [data-bs-target] img {
+       width: auto;
+       height: 100%;
+       object-fit: cover;
+       display: block;
+    }
+
+    .carousel-indicators button.active {
+        border: 2px solid #0d6efd;
+        border-radius: 10px;
+        transform: translateY(2px);
+    }
+</style>
+<body class="" style="background-color: rgb(3 7 18);">
+    <main class="vw-100 vh-100">
+        <div id="carouselExampleIndicators" class="carousel slide w-100 h-100 d-flex flex-row justify-content-center align-items-center">
+           
+            <div class="carousel-indicators py-5 px-2" style="background-color: hsla(0, 0%, 0%, 0.562)00;">
+
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width: 100px; height: 100px;" >
+                <img src="https://user-images.githubusercontent.com/78242022/283794558-047ca72b-9fe0-42f7-8d8e-09c77d48d3c0.jpg" alt="" class="">
+              </button>
+
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="" style="width: 100px; height: 100px;">
+                <img src="https://user-images.githubusercontent.com/78242022/283794732-086e3912-bdf6-44f4-a4f9-6a69110910c5.jpg" alt="" class="">
+              </button>
+
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="" style="width: 100px; height: 100px;">
+                <img src="https://user-images.githubusercontent.com/78242022/284007728-51f5c876-537d-4fd7-aaca-cac078ff718b.jpg" alt="" class="">
+              </button>
+
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4" class="" style="width: 100px; height: 100px;">
+                <img src="https://user-images.githubusercontent.com/78242022/283794606-8b10b1c2-16e0-431d-88ca-3d6c9fca4839.jpg" alt="" class="">
+              </button>
+
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5" class="" style="width: 100px; height: 100px;">
+                <img src="https://user-images.githubusercontent.com/78242022/283794710-dc582f6d-d26c-4eea-8b0c-f8b0e579e20c.jpg" alt="" class="">
+            </button>
+
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6" class="" style="width: 100px; height: 100px;">
+                <img src="https://user-images.githubusercontent.com/78242022/284007736-61188288-0f4a-472c-bf2f-76d9ca841c10.jpg" alt="" class="">
+            </button>
+
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7" class="" style="width: 100px; height: 100px;">
+                <img src="https://user-images.githubusercontent.com/78242022/284007727-9f6c5527-84fb-4aee-b88a-d38636d3e78a.jpg" alt="" class="">
+            </button>
+            </div>
+
+            <div class="container my-5  w-100 h-100">
+                <div class="position-relative p-5 text-center text-muted bg-body rounded-5 w-100 h-100" style="background-color: rgb(3 7 18)!important;">
+                <div class="carousel-inner w-100 h-100">
+
+                <div class="carousel-item active w-100 h-100">
+                    <img src="https://user-images.githubusercontent.com/78242022/283794558-047ca72b-9fe0-42f7-8d8e-09c77d48d3c0.jpg" alt="" class="w-auto h-100">
+                
+                </div><!--End of Carousel-Item-->
+
+                <div class="carousel-item w-100 h-100">
+                    <img src="https://user-images.githubusercontent.com/78242022/283794732-086e3912-bdf6-44f4-a4f9-6a69110910c5.jpg" alt="" class="w-auto h-100">
+                </div><!--End of Carousel-Item-->
+
+                <div class="carousel-item w-100 h-100">
+                    <img src="https://user-images.githubusercontent.com/78242022/284007728-51f5c876-537d-4fd7-aaca-cac078ff718b.jpg" alt="" class="w-auto h-100">
+                </div><!--End of Carousel-Item-->
+
+                <div class="carousel-item w-100 h-100">
+                    <img src="https://user-images.githubusercontent.com/78242022/283794606-8b10b1c2-16e0-431d-88ca-3d6c9fca4839.jpg" alt="" class="w-auto h-100">
+                </div><!--End of Carousel-Item-->
+
+                <div class="carousel-item w-100 h-100">
+                    <img src="https://user-images.githubusercontent.com/78242022/283794710-dc582f6d-d26c-4eea-8b0c-f8b0e579e20c.jpg" alt="" class="w-auto h-100">
+                </div><!--End of Carousel-Item-->
+
+                <div class="carousel-item w-100 h-100">
+                    <img src="https://user-images.githubusercontent.com/78242022/284007736-61188288-0f4a-472c-bf2f-76d9ca841c10.jpg" alt="" class="w-auto h-100">
+                </div><!--End of Carousel-Item-->
+
+                <div class="carousel-item w-100 h-100">
+                    <img src="https://user-images.githubusercontent.com/78242022/284007727-9f6c5527-84fb-4aee-b88a-d38636d3e78a.jpg" alt="" class="w-auto h-100">
+                </div><!--End of Carousel-Item-->
+                </div>
+                </div>
+              </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <i class="fa-solid fa-chevron-left text-bg-primary text-light py-2 px-2 rounded"></i>
+              <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <i class="fa-solid fa-chevron-right text-bg-primary text-light py-2 px-2 rounded"></i>
+              <span class="carousel-control-next-icon visually-hidden" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Material Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css" integrity="sha512-hj9rznBPdFg9A4fACbJcp4ttzdinMDtPrtZ3gBD11DiY3O1xJfn0r1U5so/J0zwfGOzq9teIaH5rFmjFAFw8SA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <style>
+        *,*::after, *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+      .carousel-item {
+        height: 100vh;
+        min-height: 18.75em;
+        position: relative;
+      }
+
+      .carousel-item::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), black);
+        
+      }
+
+      .carousel-item img {
+        width: 100%;
+        object-fit:cover;
+      }
+
+      .carousel-caption {
+        bottom: 13.75em;
+      }
+
+      .carousel-caption h5 {
+        font-size: 2.9em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 25px;
+      }
+
+      .carousel-caption p {
+        width: 60%;
+        margin: auto;
+        font-size: 1.3em;
+        line-height: 1.9;
+      }
+
+      .carousel-caption a {
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: rgb(56 189 248);
+        padding: 10px 30px;
+        display: inline-block;
+        color: #ffffff;
+        border-radius: 10px;
+        margin-top: 1em;
+      }
+
+      .carousel-caption a i{
+        transition: .3s;
+      }
+      .carousel-caption a:hover i {
+        transform: translateX(2px);
+      }
+
+      
+      .navbar-light .navbar-brand {
+        color: #fff;
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+      .navbar-light .navbar-brand:focus, 
+      .navbar-light .navbar-brand:hover {
+        color: #fff;
+      }
+
+      .navbar-light .navbar-nav .nav-link {
+        color: #fff;
+      }
+
+      .navbar-light .navbar-nav .nav-link:focus,
+      .navbar-light .navbar-nav .nav-link:hover {
+        color: #fff;
+      }
+
+      .w-100 {
+        height: 100vh;
+      }
+
+
+      @media only screen and (max-width: 767px){
+        .navbar-nav {
+          text-align: center;
+        }
+        .carousel-caption {
+          bottom: 10.3125em;
+        }
+
+        .carousel-caption h5 {
+          font-size: 2.5em;
+          transform: translateY(-40px);
+        }
+
+        .carousel-caption a {
+          padding: 10px 15px;
+          font-size: 0.7em;
+        }
+      }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">SystemICO</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://user-images.githubusercontent.com/78242022/284007689-57bf4df4-9ca5-4b52-b681-456474fa5fae.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5 class="animated bounceInRight" style="animation-delay: 1s;"  data-mdb-toggle="animation"
+              data-mdb-animation-reset="true"
+              data-mdb-animation="slide-right"
+              data-mdb-animation-start="onScroll"
+              data-mdb-animation-offset="200">UI/UX Design Agency</h5>
+              <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s;"> Pioneering Innovation in Digital Infrastructure. With a commitment to revolutionizing the technological landscape, SystemICO leads the charge in crafting cutting-edge solutions for a connected world. </p>
+              <p class="animated bounceInLeft" style="animation-delay: 3s;"><a href="#">Get Started <i class="fa-solid fa-angle-right"></i></a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://user-images.githubusercontent.com/78242022/284473823-1d713ee7-af6a-4913-b4e4-01d2d78c7e2d.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5 class="animated bounceInRight" style="animation-delay: 1s;"  data-mdb-toggle="animation"
+              data-mdb-animation-reset="true"
+              data-mdb-animation="slide-right"
+              data-mdb-animation-start="onScroll"
+              data-mdb-animation-offset="200">UI/UX Design Agency</h5>
+              <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s;">At SystemICO, Innovation is our DNA. Powered by a team of trailblazing minds, we craft bespoke strategies that harness the full potential of emerging technologies. </p>
+              <p class="animated bounceInLeft" style="animation-delay: 3s;"><a href="#">Get Started <i class="fa-solid fa-angle-right"></i></a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://user-images.githubusercontent.com/78242022/284473812-eda73791-83d8-47db-bb4f-21de64621094.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5 class="animated bounceInRight" style="animation-delay: 1s;"  data-mdb-toggle="animation"
+              data-mdb-animation-reset="true"
+              data-mdb-animation="slide-right"
+              data-mdb-animation-start="onScroll"
+              data-mdb-animation-offset="200"
+              >UI/UX Design Agency</h5>
+              <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s;">Empowering Progress, Redefining Possibilities. SystemICO stands at the forefront of progress, empowering enterprises to unlock new opportunities and redefine their digital potential </p>
+              <p class="animated bounceInLeft" style="animation-delay: 3s;"><a href="#">Get Started <i class="fa-solid fa-angle-right"></i></a></p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  </body>
+</html>
+

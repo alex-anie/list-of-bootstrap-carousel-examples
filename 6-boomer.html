@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <style>
+
+    .navbar-header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    .carousel-inner {
+        width: 100vw;
+        height: 100vh;
+        background-image: url('https://user-images.githubusercontent.com/78242022/283553047-290084e2-12ad-4876-862d-a7cee3dc0c0d.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .carousel-inner .carousel-item {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-inner .carousel-item .company-motto {
+        font-size: 3.5em;
+        text-align: center;
+        font-weight: 900;
+        transform: translateY(80%);
+        color: white;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .social-icon a {
+      transform: opacity 0.5s ease;
+    }
+
+    .social-icon a:hover {
+      opacity: 0.5;
+    }
+
+    .cta-text {
+        width: 50%;
+        font-size: 1.5em;
+        text-align: center;
+        transform: translate(50%, 100%);
+        color: white;
+    }
+
+    .ct2 {
+        transform: translate(50%, 120%);
+    }
+
+    /* Styling the CTA Buttons */
+    .cta-btn {
+      border: none;
+      outline: none;
+      background: none;
+      transform: translate(100%, 500%);
+      border: 2px solid transparent;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .cta-btn a {
+      background-color: aquamarine;
+      padding: 1em 3em;
+      margin: 10px;
+      border-radius: 100px;
+      color: black;
+      transition: all 700ms ease;
+    }
+
+    .cta-btn a:hover {
+      background-color: black;
+      color: aquamarine;
+    }
+
+    .cta-btn a i {
+      transition: all 700ms ease;
+    }
+    .cta-btn a:hover i {
+      transform: translateX(5px);
+    }
+
+
+    /* FONT-AWESOME STYLING */
+    .fa-arrow-right, .fa-arrow-left {
+        background-color: rgb(5, 34, 24);
+        padding: 30px;
+        border-radius: 100px;
+    }
+
+    .fa-group-arrows-rotate {
+      display: inline-block;
+      padding-right: 0.4em;
+      color: aquamarine;
+    }
+
+    .social-icon i {
+        color: aquamarine;
+    }
+
+    @media screen and (max-width: 576px) { 
+      .carousel-inner .carousel-item .company-motto {
+        font-size: 3em;
+        transform: translateY(50%);
+        color: white;
+    }
+
+    .cta-text {
+        width: 80%;
+        font-size: 1.5em;
+        transform: translate(10%, 50%);
+        color: white;
+    }
+
+    .cta-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translate(50%, 100%);
+      border: 2px solid transparent;
+      margin-top: 10px;
+    }
+
+    .cta-btn-3 {
+      transform: translate(50%, 70%);
+    }
+
+    .ct2 {
+        transform: translate(10%, 110%);
+    }
+
+    }
+
+    /* Tablet */
+    @media screen and (max-width:  992px) { 
+      .carousel-inner .carousel-item .company-motto {
+        font-size: 3em;
+        transform: translateY(80%);
+        color: white;
+    }
+
+    .cta-text {
+        width: 80%;
+        font-size: 1.2em;
+        transform: translate(10%, 120%);
+    }
+
+    .cta-btn {
+      transform: translate(50%, 400%);
+      border: 2px solid transparent;
+      margin-top: 10px;
+    }
+
+    .cta-btn-3 {
+      transform: translate(50%, 70%);
+    }
+
+    .ct2 {
+        transform: translate(10%, 110%);
+    }
+     }
+  </style>
+  <body>
+    <main>
+
+      <header data-bs-theme="dark" class="navbar-header">
+        <div class="collapse text-bg-dark" id="navbarHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-md-7 py-4">
+                <i class="fa-solid fa-group-arrows-rotate"></i>
+                <h4 style="display: inline-block;">Boomer Agency</h4>
+                <p class="text-body-secondary">At Boomer Agency, we're not just about building websites; we're architects of digital experiences. With a seasoned team that blends innovative creativity with years of industry expertise, we bring your brand's story to life in the digital sphere</p>
+              </div>
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h4>Contact</h4>
+                <ul class="list-unstyled social-icon">
+                  <li><a href="#" class="text-white">
+                    <i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                  </li>
+                  <li><a href="#" class="text-white">
+                    <i class="fa-brands fa-linkedin"></i> Linkedin</a></li>
+                  <li><a href="#" class="text-white"><i class="fa-solid fa-square-envelope"></i> Email</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+          <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+              <i class="fa-solid fa-group-arrows-rotate"></i>
+              <strong>Boomer Agency</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h2 class="company-motto">Where Digital Vision Meets <br /> Timeless Design</h2>
+                <p class="cta-text">At Boomer Agency, we're not just about building websites; we're architects of digital experiences. With a seasoned team that blends innovative creativity with years of industry expertise, we bring your brand's story to life in the digital sphere.</p>
+
+                <button class="cta-btn cta-btn-1">
+                    <a href="">
+                      Get Started <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <a href="">
+                      Learn More <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </button>
+
+              </div>
+              <div class="carousel-item">
+                <h2 class="company-motto">Where Digital Vision <br /> Meets Timeless Design</h2>
+                <p class="cta-text">Our ethos? Timeless design coupled with cutting-edge technology. We craft websites that stand the test of time, ensuring your online presence remains impactful and relevant amidst ever-evolving trends.</p>
+
+                <button class="cta-btn cta-btn-2">
+                  <a href="">
+                    Get Started <i class="fa-solid fa-angle-right"></i>
+                  </a>
+                  <a href="">
+                    Learn More <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+              </button>
+                
+              </div>
+              <div class="carousel-item">
+                <h2 class="company-motto cm-">Where Digital Vision <br /> Meets Timeless Design</h2>
+                <p class="cta-text">From sleek and user-friendly interfaces to seamless e-commerce solutions and captivating visual identities, we're dedicated to elevating your online footprint.</p>
+                <p class="cta-text ct2">Boomer Agency: Igniting Your Digital Journey, Crafting Timeless Connections."</p>
+
+                <button class="cta-btn cta-btn-3">
+                  <a href="">
+                    Get Started <i class="fa-solid fa-angle-right"></i>
+                  </a>
+                  <a href="">
+                    Learn More <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+              </button>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <i class="fa-solid fa-arrow-left"></i>
+              <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <i class="fa-solid fa-arrow-right"></i>
+              <span class="carousel-control-next-icon visually-hidden" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+
+            </button>
+
+          </div>
+  </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  </body>
+</html>

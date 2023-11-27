@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Background Carousel</title>
+  </head>
+
+    <style>
+      *,*::after,*::before {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+        .carousel-btn {
+          width: 50px;
+          height: 50px;
+          margin: 5px;
+          cursor: pointer;
+        }
+        
+        button {
+          background: none;
+          border: none;
+        }
+
+        button img {
+          width: 100%;
+          object-fit: contain;
+          padding:0;
+        }
+
+        .carousel-box {
+          width: 400px;
+          height: 400px;
+          margin: 5px;
+        }
+
+        .carousel-wrapper {
+          display: flex;
+        }
+
+        .carousel {
+          display: flex;
+        }
+
+        .carousel-box img {
+          width: 100%;
+          object-fit: contain;
+        }
+    </style>
+<body>
+<main class="carousel-container">
+    <section class="carousel-wrapper">
+        
+        <aside class="buttons">
+
+          <div class="carousel-btn btn1 bg-primary shadow-sm rounded">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"> 
+              <img src="https://user-images.githubusercontent.com/78242022/282707979-d7fe3128-58fc-47b9-bcf7-9150b311a403.png" class="d-block w-100" alt="...">
+            </button>
+          </div>
+
+          <div class="carousel-btn btn2 bg-primary shadow-sm rounded">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="">
+              <img src="https://user-images.githubusercontent.com/78242022/282707987-d7bf8524-eb9c-441d-85e6-e53df7b4fa89.png" class="d-block w-100" alt="...">
+            </button>
+          </div>
+
+          <div class="carousel-btn btn3 bg-primary shadow-sm rounded">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
+              <img src="https://user-images.githubusercontent.com/78242022/282707992-e7980555-a6b1-48f5-9416-079f9a7ca8fe.png" class="d-block" alt="...">
+            </button>
+          </div>
+
+          <div class="carousel-btn btn4 bg-primary shadow-sm rounded"> 
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4">
+              <img src="https://user-images.githubusercontent.com/78242022/282707999-8d9ee011-b0da-4512-9d46-42f5e774cf5d.png" class="d-block" alt="...">
+            </button>
+          </div>
+        </aside>
+
+        <!-- Carousel -->
+        <aside class="carousel" id="carouselExampleIndicators" class="carousel slide carousel-wrapper d-flex flex-row" data-bs-ride="carousel">
+            <section class="carousel-inner">
+
+            <div class="carousel-box box1 carousel-item active bg-primary shadow-sm rounded">
+              <img src="https://user-images.githubusercontent.com/78242022/282707979-d7fe3128-58fc-47b9-bcf7-9150b311a403.png" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-box box2 carousel-item bg-primary shadow-sm rounded"> 
+              <img src="https://user-images.githubusercontent.com/78242022/282707987-d7bf8524-eb9c-441d-85e6-e53df7b4fa89.png" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-box box3 carousel-item bg-primary shadow-sm rounded">
+              <img src="https://user-images.githubusercontent.com/78242022/282707992-e7980555-a6b1-48f5-9416-079f9a7ca8fe.png" class="d-block" alt="...">
+            </div>
+
+            <div class="carousel-box box4 carousel-item bg-primary shadow-sm rounded">
+              <img src="https://user-images.githubusercontent.com/78242022/282707999-8d9ee011-b0da-4512-9d46-42f5e774cf5d.png" class="d-block" alt="...">
+            </div>
+          </section>
+        </aside>
+    </section>
+</main>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+</html>

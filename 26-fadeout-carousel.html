@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Owl Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- External Owl Carousel CSS CDN Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+    <style>
+        .card {
+          width: 100%;
+          border-radius: 10px;
+        }
+        
+        .card img {
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+        }
+
+        i.fa-star {
+            color: orangered;
+        }
+
+        .btn-group i {
+            color: orangered;
+        }
+
+        .btn-group button:hover {
+            background-color: orange;
+        }
+
+        .btn-group button:hover i.fa-solid {
+            color: black;
+        }
+
+        .card-body h2 {
+            font-size: 1.2em;
+            text-transform: capitalize;
+        }
+
+        /* Indicators */
+        .owl-theme .owl-dots .owl-dot.active span, 
+        .owl-theme .owl-dots .owl-dot:hover span {
+            background: orange;
+            width: 30px;
+        }
+
+        .owl-theme .owl-dots .owl-dot span {
+        width: 15px;
+        height: 15px;
+        background: orangered;
+        transition: all .2s ease;
+    }
+
+    /* Controls */
+    /* button element */
+    .owl-carousel .owl-nav button.owl-next, 
+    .owl-carousel .owl-nav button.owl-prev {
+        position: relative;
+        background-color: rgba(255, 166, 0, 0.3);
+        width: 30px;
+        padding: 5px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next:hover, 
+    .owl-carousel .owl-nav button.owl-prev:hover {
+        background-color: orange;
+    }
+
+    .owl-carousel .owl-nav button.owl-next::before, 
+    .owl-carousel .owl-nav button.owl-prev::before {
+        width: 100%;
+        height: 100%;
+        color: orangered;
+        /* inset: 0;
+        position: absolute; */
+    }
+
+    .owl-carousel .owl-nav button.owl-next::before {
+        content:'\f061'; /*unicode for arrow-right*/
+        font-family: 'Font Awesome 5 Free'; /* Font family for Font Awesome */
+        font-weight: 900; /* Font weight for the solid style (fas) */
+        margin-right: 5px; 
+    }
+
+    .owl-carousel .owl-nav button.owl-prev::before {
+        content:'\f060'; /*unicode for arrow-left*/
+        font-family: 'Font Awesome 5 Free'; /* Font family for Font Awesome */
+        font-weight: 900; /* Font weight for the solid style (fas) */
+        margin-right: 5px; 
+    }
+
+.owl-carousel .owl-nav .owl-next [aria-label="Next"], 
+.owl-carousel .owl-nav .owl-prev [aria-label="Previous"]{
+    visibility:hidden /*The Span element*/
+}
+
+/* 3D Spinner */
+        .owl-carousel .item {
+		    text-align: center;
+		    padding: 50px;
+			margin-bottom:10px;
+		    opacity: .2;
+		    -webkit-transform: scale3d(0.8, 0.8, 1);
+		    transform: scale3d(0.8, 0.8, 1);
+		    -webkit-transition: all 0.3s ease-in-out;
+		    -moz-transition: all 0.3s ease-in-out;
+		    transition: all 0.3s ease-in-out;
+		}
+		.owl-carousel .owl-item.active.center .item {
+		    opacity: 1;
+		    -webkit-transform: scale3d(1.0, 1.0, 1);
+		    transform: scale3d(1.0, 1.0, 1);
+}
+
+    </style>
+<body style="background-color: rgb(212, 214, 213);">
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Popular Dishes</h2>
+        <div class="owl-carousel owl-theme">
+            <div class="item item1">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/284877820-9ebd970d-422f-4f51-bf2c-dac1694bbdae.jpg" width="100%" height="225px" />
+                    
+                    <div class="card-body">
+                        <h2>Hamburger</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                      <p class="card-text">Succulent, juicy, and utterly satisfying, this hamburger is a taste of pure delight.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-shopping"></i></button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-money-bill"></i></button>
+                        </div>
+                        <small class="text-body-secondary">$200</small>
+                      </div>
+                    </div>
+                  </div>
+            </div><!--[End of Item one]-->
+
+            <div class="item item2">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/284889834-1fd6c291-3239-47de-aafd-9cbb2dfae86a.jpg" width="100%" height="225px" />
+                    
+                    <div class="card-body">
+                        <h2>Sausages</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                      <p class="card-text">Savory, hearty, and absolutely delicious – a must-try sausage that's bursting with flavor</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-shopping"></i></button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-money-bill"></i></button>
+                        </div>
+                        <small class="text-body-secondary">$50</small>
+                      </div>
+                    </div>
+                  </div>
+            </div><!--[End of Item two]-->
+
+            <div class="item item3">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/284897764-d7c21194-a220-403f-915b-aab2485a371f.jpg" width="100%" height="225px" />
+                    
+                    <div class="card-body">
+                        <h2>French Fries</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                      <p class="card-text">Perfectly crispy on the outside, fluffy on the inside—these French fries are simply addictive</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-shopping"></i></button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-money-bill"></i></button>
+                        </div>
+                        <small class="text-body-secondary">$100</small>
+                      </div>
+                    </div>
+                  </div>
+            </div><!--[End of Item three]-->
+
+            <div class="item item4">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/284900586-66d38187-c3bd-4bf8-938d-166837f15607.jpg" width="100%" height="225px" />
+                    
+                    <div class="card-body">
+                        <h2>Fried Chicken</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                      <p class="card-text">Crunchy, flavorful, and oh-so-juicy—this fried chicken hits all the right notes.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-shopping"></i></button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-money-bill"></i></button>
+                        </div>
+                        <small class="text-body-secondary">$150</small>
+                      </div>
+                    </div>
+                  </div>
+            </div><!--[End of Item four]-->
+
+            <div class="item item5">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/284902669-49233d9c-71c1-41ad-932d-421873bada98.jpg" width="100%" height="225px" />
+                    <div class="card-body">
+                        <h2>Vegetable Salad</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                      <p class="card-text">Fresh, vibrant, and bursting with flavors—this vegetable salad is a healthy and delicious choice!</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-shopping"></i></button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-money-bill"></i></button>
+                        </div>
+                        <small class="text-body-secondary">$70</small>
+                      </div>
+                    </div>
+                  </div>
+            </div><!--[End of Item five]-->
+
+            <div class="item item6">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/284904850-4b2d98b8-ffce-4007-9bca-ddac599f0f26.jpg" width="100%" height="225px" />      
+                    <div class="card-body">
+                        <h2>Beans</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                      <p class="card-text">Nutritious, hearty, and packed with flavor—these beans are a delicious and satisfying choice.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-shopping"></i></button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-money-bill"></i></button>
+                        </div>
+                        <small class="text-body-secondary">$120</small>
+                      </div>
+                    </div>
+                  </div>
+            </div><!--[End of Item six]-->
+
+            <div class="item item7">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/284908212-e58cf567-8ab4-4bd2-995b-b74f687933f3.jpg" width="100%" height="225px" />
+                    
+                    <div class="card-body">
+                        <h2>sandwich</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                      <p class="card-text">Simple yet scrumptious, this sandwich hits the spot every time.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-shopping"></i></button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-money-bill"></i></button>
+                        </div>
+                        <small class="text-body-secondary">$30</small>
+                      </div>
+                    </div>
+                  </div>
+            </div><!--[End of Item seven]-->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Owl JavaScript Min CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        center: true,
+        items: 3,
+        margin: 0,
+        autoplay: true,
+        dots:true,
+        autoplayTimeout: 1000,
+        smartSpeed: 450,
+        responsive: {
+              0: {
+          items: 1
+          },
+          768: {
+          items: 2
+          },
+        1170: {
+        items: 3
+      }
+    }
+});
+    </script>
+  </body>
+</html>

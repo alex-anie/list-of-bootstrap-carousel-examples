@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Owl Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- External Owl Carousel CSS CDN Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+    <style>
+      body {
+        background-image: linear-gradient(180deg, rgb(191 219 254) 0%, rgb(37 99 235) 100%);
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100vh;
+      }
+
+        /* Image Container */
+        .item span {
+          width: 60px;
+          height: 60px;
+        }
+
+        /* Image */
+        .item div img {
+            width: 100px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+
+        /* Name */
+        .person h1 {
+          font-size: 1em;
+          margin: 12px 0;
+          white-space: nowrap;
+        }
+
+        /* Content */
+        .content p {
+          width: wrap;
+          margin-top: 1em;
+        }
+
+        .owl-carousel {
+          margin-top: 1em;
+        }
+
+        /* Indicators */
+        .owl-theme .owl-dots .owl-dot.active span, 
+        .owl-theme .owl-dots .owl-dot:hover span {
+            background: rgb(37 99 235);
+            width: 30px;
+        }
+
+        .owl-theme .owl-dots .owl-dot span {
+        width: 15px;
+        height: 15px;
+        transition: all .2s ease;
+        border: 3px solid rgb(191 219 254);
+    }
+
+/* 3D Spinner */
+  .owl-carousel .item {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    background-color: rgb(191 219 254);
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-top: 10px;
+		-webkit-transform:  scale(0);
+    transform: scale(0);
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		transition: all 0.3s ease; 
+		}
+
+		.owl-carousel .owl-item.active.center .item {
+      background-color: white;
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+    }
+
+    </style>
+<body>
+    <div class="container px-4 py-5 position-relative" id="custom-cards" >
+        <div class="owl-carousel owl-theme">
+            <div class="item item1">
+                <div class="person">
+                  <span>
+                    <img src="https://user-images.githubusercontent.com/78242022/285303639-26efe6ad-f7eb-470c-90ca-474a4746eaa3.jpg" alt="">
+                  </span>
+                  <h1>Nelson Mandela</h1>
+                </div>
+
+                <div class="content">
+                  <p>The greatest glory in living lies not in never falling, but in rising every time we fall</p>
+                </div>
+            </div><!--[End of Item one]-->
+
+            <div class="item item2">
+              <div class="person">
+                <span>
+                  <img src="https://user-images.githubusercontent.com/78242022/285303651-590482c3-5a3c-4d67-a93f-6c01a310e7c3.jpeg" alt="">
+                </span>
+                <h1>Walt Disney</h1>
+              </div>
+
+              <div class="content">
+                <p>The way to get started is to quit talking and begin doing</p>
+              </div>
+          </div><!--[End of Item two]-->
+
+          <div class="item item3">
+            <div class="person">
+             <span>
+              <img src="https://user-images.githubusercontent.com/78242022/285303645-8a3c2fae-95f6-4dc2-b77f-8afa5cf2d17a.jpeg" alt="">
+             </span>
+              <h1>Steve Jobs</h1>
+            </div>
+
+            <div class="content">
+              <p>Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking</p>
+            </div>
+        </div><!--[End of Item two]-->
+
+        <div class="item item4">
+          <div class="person">
+            <span>
+              <img src="https://user-images.githubusercontent.com/78242022/285303644-d40b284e-f800-4287-b368-bf09699670e6.jpeg" alt="">
+            </span>
+            <h1>Eleanor Roosevelt</h1>
+          </div>
+
+          <div class="content">
+            <p>The future belongs to those who believe in the beauty of their dreams</p>
+          </div>
+      </div><!--[End of Item two]-->
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Owl JavaScript Min CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        center: true,
+        items: 3,
+        margin: 0,
+        autoplay: true,
+        dots:true,
+        autoplayTimeout: 1000,
+        smartSpeed: 450,
+        responsive: {
+            0: {
+                items: 1
+                },
+                768: {
+                items: 2
+                },
+                1170: {
+                items: 3
+            }
+        }
+});
+    </script>
+  </body>
+</html>

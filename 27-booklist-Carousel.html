@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Owl Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- External Owl Carousel CSS CDN Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+    <style>
+        .card {
+          width: 100%;
+        }
+        
+        .card img {
+            margin: 10px 0;
+            width: 2.5em;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+        }
+        .card-body div {
+            display: flex;
+        }
+
+        .card-body div img {
+            max-width: 16.5px;
+            height: 12px;
+            border-radius: 0%;
+            margin:0 5px;
+        }
+
+        .card-body div h2 {
+            font-size: 12px;
+            margin:0 10px;
+        }
+
+        .card-text {
+            text-align: start;
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
+
+        /* Indicators */
+        .owl-theme .owl-dots .owl-dot.active span, 
+        .owl-theme .owl-dots .owl-dot:hover span {
+            background: rgb(37 99 235);
+            width: 30px;
+        }
+
+        .owl-theme .owl-dots .owl-dot span {
+            width: 15px;
+            height: 15px;
+            transition: all .2s ease;
+            border: 3px solid rgb(191 219 254);
+        }
+
+    /* Controls */
+    /* button element */
+    .owl-carousel .owl-nav button.owl-next, 
+    .owl-carousel .owl-nav button.owl-prev {
+        position: relative;
+        background-color: rgba(255, 255, 255);
+        width: 60px;
+        line-height: 60px;
+        border-radius: 100%;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        position: absolute;
+        top: 10em;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev {
+        left: 2em;
+    }
+    .owl-carousel .owl-nav button.owl-next {
+        right: 2em;
+    }
+
+    .owl-carousel .owl-nav button.owl-next:hover, 
+    .owl-carousel .owl-nav button.owl-prev:hover {
+        background-color: rgb(191 219 254);
+    }
+
+    .owl-carousel .owl-nav button.owl-next::before, 
+    .owl-carousel .owl-nav button.owl-prev::before {
+        width: 100%;
+        height: 100%;
+        color: rgb(37 99 235);
+        inset: 0;
+        position: absolute; 
+        display: inline-block;
+
+    }
+
+    .owl-carousel .owl-nav button.owl-next::before {
+        content:'\f054'; /*unicode for chevron-right*/
+        font-family: 'Font Awesome 5 Free'; /* Font family for Font Awesome */
+        font-weight: 900; /* Font weight for the solid style (fas) */
+        margin-right: 5px; 
+    }
+
+    .owl-carousel .owl-nav button.owl-prev::before {
+        content:'\f053'; /* unicode for chevron-left */
+        font-family: 'Font Awesome 5 Free'; /* Font family for Font Awesome */
+        font-weight: 900; /* Font weight for the solid style (fas) */
+        margin-right: 5px; 
+    }
+
+.owl-carousel .owl-nav .owl-next [aria-label="Next"], 
+.owl-carousel .owl-nav .owl-prev [aria-label="Previous"]{
+    visibility: hidden /*The Span element*/
+}
+
+/* 3D Spinner */
+        .owl-carousel .item {
+		    text-align: center;
+		    padding: 50px;
+			margin-bottom:10px;
+		    opacity: .2;
+		    -webkit-transform: rotate(20deg);
+		    transform: rotate(20deg);
+		    -webkit-transition: all 0.3s ease;
+		    -moz-transition: all 0.3s ease;
+		    transition: all 0.3s ease;
+		}
+		.owl-carousel .owl-item.active.center .item {
+		    opacity: 1;
+		    -webkit-transform: rotate(0deg);
+		    transform: rotate(0deg);
+        }
+
+    </style>
+<body>
+    <div class="container px-4 py-5 position-relative" id="custom-cards" >
+        <h2 class="pb-2 border-bottom">Books to Read</h2>
+        <div class="owl-carousel owl-theme">
+            <div class="item item1">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/285021205-96fd5356-c0a2-498b-9824-8fce86ee4f5d.jpg" width="100%" height="225px" />
+                    
+                    <div class="card-body">
+                            <div>
+                                <img src="https://user-images.githubusercontent.com/78242022/285021219-856eeae2-4823-4e33-bdff-d26bac9a03ff.svg" alt="USA Flags">
+                                <h2>US Store</h2>
+                            </div>
+                        <p class="card-text">Psychology of Attraction: Learn the psychological secrets of attraction, a positive ...</p>
+                    </div>
+                  </div>
+            </div><!--[End of Item one]-->
+
+            <div class="item item2">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/285021210-d0c372e1-a350-4088-ae7a-99c20a7a47d0.jpg" width="100%" height="225px" />
+                    
+                    <div class="card-body">
+                        <div>
+                            <img src="https://user-images.githubusercontent.com/78242022/285021219-856eeae2-4823-4e33-bdff-d26bac9a03ff.svg" alt="USA Flags">
+                            <h2>US Store</h2>
+                        </div>
+                      <p class="card-text">Dark Psychology Secrets: Learn The Art of Reading People and Psychological Triggers ...</p>
+                     
+                    </div>
+                  </div>
+            </div><!--[End of Item two]-->
+
+            <div class="item item3">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/285021200-36ff2e67-507e-4fb2-81f5-41f409157d4f.jpg" width="100%" height="225px" />
+                        <div class="card-body">
+                            <div>
+                                <img src="https://user-images.githubusercontent.com/78242022/285021219-856eeae2-4823-4e33-bdff-d26bac9a03ff.svg" alt="USA Flags">
+                                <h2>US Store</h2>
+                            </div>
+                        <p class="card-text">Law Of Attraction- Get Your Ex Back & Manifesting True Love : Manifestation ...</p>
+                </div>
+            </div>
+            </div><!--[End of Item three]-->
+
+            <div class="item item4">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/285021207-bd5f4d1a-7ec3-4d65-89f5-bb205a80281b.jpg" />
+                    
+                    
+                        <div class="card-body">
+                            <div>
+                                <img src="https://user-images.githubusercontent.com/78242022/285021219-856eeae2-4823-4e33-bdff-d26bac9a03ff.svg" alt="USA Flags">
+                                <h2>US Store</h2>
+                            </div>
+                          <p class="card-text">The Mindset Revolution : Mastering the 9 Pillars of Psychology to Conquer ...</p>
+                    </div>
+                  </div>
+            </div><!--[End of Item four]-->
+
+            <div class="item item5">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/285021213-d028050c-c912-45e3-afa4-1082bea6f8f6.jpg" width="100%" height="225px" />
+                    <div class="card-body">
+                            <div>
+                                <img src="https://user-images.githubusercontent.com/78242022/285021219-856eeae2-4823-4e33-bdff-d26bac9a03ff.svg" alt="USA Flags">
+                                <h2>US Store</h2>
+                            </div>
+                        <p class="card-text">Dark Psychology Secrets : Your Ultimate Guide To Learn How To Stop Being ...</p>
+                    </div>
+                  </div>
+            </div><!--[End of Item five]-->
+
+            <div class="item item6">
+                <div class="card shadow-sm">
+                    <img src="https://user-images.githubusercontent.com/78242022/285021215-30e161d5-b680-4642-8332-f497c7791f3d.jpg">
+                        <div class="card-body">
+                            <div>
+                                <img src="https://user-images.githubusercontent.com/78242022/285021219-856eeae2-4823-4e33-bdff-d26bac9a03ff.svg" alt="USA Flags">
+                                <h2>US Store</h2>
+                            </div>
+                        <p class="card-text">The Psychology of Attraction Explained  Understand what attracts</p>
+                    </div>
+                  </div>
+            </div><!--[End of Item six]-->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Owl JavaScript Min CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    $('.owl-carousel').owlCarousel({
+        loop: false,
+        center: true,
+        items: 3,
+        margin: 0,
+        nav:true,
+        autoplay: false,
+        dots:true,
+        autoplayTimeout: 1000,
+        smartSpeed: 450,
+        responsive: {
+            0: {
+                items: 1
+                },
+                768: {
+                items: 2
+                },
+                1170: {
+                items: 3
+            }
+        }
+});
+    </script>
+  </body>
+</html>

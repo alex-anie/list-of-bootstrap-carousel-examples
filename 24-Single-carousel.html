@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Material Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css" integrity="sha512-hj9rznBPdFg9A4fACbJcp4ttzdinMDtPrtZ3gBD11DiY3O1xJfn0r1U5so/J0zwfGOzq9teIaH5rFmjFAFw8SA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <style>
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    } 
+
+    .carousel-item::before {
+      content: '';
+      background: linear-gradient(to bottom, rgba(255,255,255,0.5), black);
+      width: 50%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .name {
+      width: 50%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      position: absolute;
+      color: #fff;
+      padding: 10px;
+      z-index: 2;
+    }
+
+    .name h2 {
+      font-size: 2.5em;
+      font-weight: lighter;
+      background-color: whitesmoke;
+      color:black;
+      border-radius: 10px;
+      text-align: center;
+      width: fit-content;
+      padding: 3px 5px;
+      margin: 10px 0;
+      white-space: nowrap;
+    }
+
+    .name p {
+      font-weight: lighter;
+      padding: 5px;
+      margin: 10px 0;
+    }
+</style>
+<body>
+    <main>
+      <div id="carouselExampleIndicators" class="carousel slide vh-100 vw-100 position-relative d-flex justify-content-center align-items-center flex-column">
+        <div class="carousel-indicators position-absoulute" style="bottom: 5em; left: 2%; z-index: 3;">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner" style="width: 400px; height: 500px;">
+          <div class="carousel-item active h-100 w-100">
+            <img src="https://user-images.githubusercontent.com/78242022/283794681-4ef25f40-67d6-4cd1-87d4-d584895f09e5.jpg" class="d-block h-100 w-100" alt="..." style="isolation: isolate;">
+            <div class="name">
+              <h2>Kyoto</h2>
+              <p>
+                Kyoto, once the capital of Japan, is a city on the island of Honshu. It's famous for its numerous classical Buddhist temples, as well as gardens, imperial palaces, Shinto shrines and traditional wooden houses.
+              </p>
+             
+            </div>
+          </div>
+          <div class="carousel-item h-100 w-100">
+            <img src="https://user-images.githubusercontent.com/78242022/283794710-dc582f6d-d26c-4eea-8b0c-f8b0e579e20c.jpg" class="d-block h-100 w-100" alt="...">
+            <div class="name">
+              <h2>New York</h2>
+              <p>
+                New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers
+              </p>
+          </div>
+        </div>
+          <div class="carousel-item">
+            <img src="https://user-images.githubusercontent.com/78242022/283794732-086e3912-bdf6-44f4-a4f9-6a69110910c5.jpg" class="d-block h-100 w-100" alt="...">
+            <div class="name">
+              <h2>Tokyo</h2>
+              <p>
+                Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods.
+              </p>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://user-images.githubusercontent.com/78242022/283794676-ca297e75-3acf-4364-8e07-27f2e2fd3f11.jpg" class="d-block h-100 w-100" alt="...">
+            <div class="name">
+              <h2>Las Vegas</h2>
+              <p>
+                Las Vegas, often known simply as Vegas, is the 25th-most populous city in the United States, the most populous city in the state of Nevada, and the county seat of Clark County. The Las Vegas Valley metropolitan area is the largest within the greater Mojave Desert, and 2nd-largest in the Southwestern United States.
+              </p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
+

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Owl Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- External Owl Carousel CSS CDN Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+    <style>
+    
+        .carousel-landmark {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
+        }
+
+        .car-content  {
+          grid-column: span 3;
+          position: relative;
+        }
+        .text-content {
+          grid-column: span -1;
+          margin-right: 1.5em;
+        }
+
+        .carousel-inner {
+          width: 100%;
+          height: 100%;
+        }
+
+      
+
+        .carousel-item {
+          width: 100%;
+          height: 100%;
+        }
+
+        .carousel-item img {
+          width: 100%;
+          object-fit: cover;
+        }
+
+        .text-content .blue-box {
+          background: radial-gradient(ellipse at 50% -50%,#6c94ff 0,#000 100%);
+          border-radius: 10px;
+          padding: 20px;
+        }
+
+        .text-content .blue-box .blue-box-heading {
+          font-size: 0.875em;
+          color: #fff;
+          font-weight: bolder;
+        }
+
+        .text-content .blue-box .blue-box-paragraph {
+          font-size: 0.75em;
+          color: #fff;
+        }
+        
+        .blue-box-archor {
+          display: block;
+          font-size: 0.875em;
+          color: #fff;
+          text-decoration: underline;
+        }
+
+        .text-content .white-box .white-box-heading {
+            font-size: 2em;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .text-content .white-box .white-box-paragraph {
+            font-size: 0.875em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .speed-ranges {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .speed-ranges .speed {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .speed-ranges span small {
+          font-size: 2em;
+        }
+
+        .speed-ranges span em {
+          font-weight: bold;
+          font-style: normal;
+        }
+
+        .speed-ranges .rate {
+          color: #7c7b7b;
+        }
+
+        .control-buttons .fa-solid {
+          background-color: #000;
+          padding: 10px;
+          border-radius: 6px;
+        }
+
+        @media (max-width: 576px) { 
+          .car-content  {
+          grid-column: span 4;
+        }
+        .text-content {
+          grid-column: span 4;
+          margin: 0 1.5em;
+        }
+        }
+      </style>
+      
+<body>
+  <main>
+    <div id="carouselExample" class="carousel slide">
+      <!-- As a link -->
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            TESLA
+          </a>
+        </div>
+      </nav>
+
+      <div class="carousel-landmark">
+        <!-- Car content section -->
+        <aside class="car-content">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://user-images.githubusercontent.com/78242022/285640912-53f76203-5bfb-4e5d-a453-eee0f2bb6caa.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://user-images.githubusercontent.com/78242022/285640891-ee9bfa3f-8571-45df-afa6-3fee416c6a02.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://user-images.githubusercontent.com/78242022/285640893-8fbd71e5-9b2c-43f4-b6ba-aec52f3d51ee.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://user-images.githubusercontent.com/78242022/285640911-3b065530-a9ca-4c41-8c8a-092b7e3620b3.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+
+          <!-- BTN -->
+          <div class="control-buttons">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <i class="fa-solid fa-angle-left"></i>
+              <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <i class="fa-solid fa-angle-right"></i>
+              <span class="carousel-control-next-icon visually-hidden" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </aside>
+
+        <!-- Text Heading Section -->
+        <aside class="text-content">
+          <section>
+            <div>
+              <div class="blue-box">
+                <h3 class="blue-box-heading">$7,500 Federal Tax Credit</h3>
+                <p class="blue-box-paragraph">All new Model Y vehicles currently qualify for a federal tax credit for eligible buyers. Take delivery by Dec 31 for full $7,500 tax credit.</p>
+                <a class="blue-box-archor" href="#">see details</a>
+                <h class="blue-box-heading"3>6 Months Free Supercharging</h3>
+                <a class="blue-box-archor" href="#">see details</a>
+                <p class="blue-box-paragraph">Receive 6 months of free Supercharging by taking delivery of Model Y or Model 3 by Dec 31.</p>
+                <a class="blue-box-archor" href="#">see details</a>
+              </div>
+              <div class="white-box">
+                <h3 class="white-box-heading">Model Y</h3>
+                <p class="white-box-paragraph">Model Y Rear-Wheel Drive</p>
+
+                <article class="speed-ranges">
+                  <div class="speed one">
+                    <span>
+                      <small class="numbers">260</small><em>mi</em>
+                    </span>
+                    <span class="rate"> Range (EPA est.)</span>
+                  </div>
+  
+                  <div class="speed two">
+                    <span>
+                      <small class="numbers">135</small><em>mph</em>
+                    </span>
+                    <span class="rate">Top Speed</span>
+                  </div>
+  
+                  <div class="speed three">
+                    <span>
+                      <small class="numbers">6.6</small><em>sec</em>
+                    </span>
+                    <span class="rate">0-60 mph</span>
+                  </div>
+
+                </article>
+              </div>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+
+      
+
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+  </body>
+</html>

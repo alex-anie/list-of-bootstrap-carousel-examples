@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .logos-slide {
+            animation: 40s slide infinite linear;
+        }
+
+        .logos-slide img {
+            width: 400px;
+            margin: 0 50px;
+            border-radius: 20px;
+            transform: skewX(15deg);
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .logos-slide img:hover {
+            transform: skewX(0);
+            transform: scale(1.1);
+        }
+
+        .logos-slide img::before {
+            content: attr(data-name);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-text img {
+            width: 100px;
+            margin-bottom: 1em;
+        }
+
+        .hero-text h2 {
+            font-family: 3em;
+            font-weight: lighter;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-text p {
+            font-family: 1.2em;
+            font-weight: lighter;
+            text-align: center;
+            color: white;
+        }
+
+        @keyframes slide {
+            from{
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+</style>
+<body class="bg-dark">
+    <main class="vw-100 vh-100 d-flex flex-row justify-content-center align-items-center">
+      <div class="logos overflow-hidden py-5 px-0 position-relative" style="white-space: nowrap;">
+        <div class="hero-text">
+            <img src="https://user-images.githubusercontent.com/78242022/285059508-68acfaca-f775-48a3-bafc-d54d4ae7b65d.png" alt="">
+            <h2> Meet our Speakers </h2>
+            <p> Join a community of millions and discover what it takes to be a developer in today's job market</p>
+        </div>
+        
+    <div class="logos-slide d-inline-block">
+        <img src="https://user-images.githubusercontent.com/78242022/285054142-ed1d9e5f-3ef6-43da-b67b-e49ab9320201.jpg" alt=""><!--one-->
+
+        <img src="https://user-images.githubusercontent.com/78242022/285054159-b81070b0-480b-4e9d-8e0d-58472f7cc0c4.jpg" alt=""><!--two-->
+
+        <img src="https://user-images.githubusercontent.com/78242022/285054161-ec676d07-7496-4885-bbb1-9ec4ed4d8d6f.jpg" alt=""><!--three-->
+
+        <img src="https://user-images.githubusercontent.com/78242022/285054165-d35b2d00-cd5c-4688-9014-e2c550f96ed4.jpg" alt=""><!--four-->
+
+        <img src="https://user-images.githubusercontent.com/78242022/285054167-fcbb0c7a-2a1f-4ce9-8462-d45aaff0242d.jpg" alt=""><!--five-->
+
+        <img src="https://user-images.githubusercontent.com/78242022/285054171-22d3e31b-0128-4314-a1ed-4771f8a76dae.jpg" alt=""><!--six-->
+
+        <img src="https://user-images.githubusercontent.com/78242022/285054175-c1759dbe-0b44-44c0-a60d-05a377125458.jpg" alt=""><!--seven-->
+
+        <img src="https://user-images.githubusercontent.com/78242022/285054185-38a62c32-4e43-4de1-bf9d-88ea94db3e49.jpg" alt=""><!--eight-->
+
+        <img src="https://user-images.githubusercontent.com/78242022/285054188-0c24a155-5717-463a-a54a-d11e36eb6bfd.jpg" alt=""><!--nine-->
+
+        <img src="https://user-images.githubusercontent.com/78242022/285054195-431d23fe-7361-40a9-ac48-ac5c8e502dc5.jpg" alt=""><!--ten-->
+
+        <img src="https://user-images.githubusercontent.com/78242022/285054203-60f3b327-be12-4e84-94c7-5108237376d3.jpg" alt=""><!--eleven-->
+        
+        </div>
+    </div>
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<script>
+    const cloneEl = document.querySelector(".logos-slide").cloneNode(true);
+    const logos = document.querySelector('.logos').appendChild(cloneEl);
+</script>
+  </body>
+</html>

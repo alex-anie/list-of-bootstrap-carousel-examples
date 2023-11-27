@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .logos::before, 
+        .logos::after {
+            content: '';
+            width: 300px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+        }
+
+        .logos::before {
+            left: 0;
+            background: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
+        }
+
+        .logos::after {
+            right: 0;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+        }
+
+        .logos-slide {
+            animation: 20s slide infinite linear;
+        }
+
+        .logos:hover .logos-slide {
+            animation-play-state: paused;
+        }
+
+        .logos-slide img {
+            height: 60px;
+            margin: 0 50px;
+        }
+
+        @keyframes slide {
+            from{
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+</style>
+<body class="bg-dark">
+    <main class="vw-100 vh-100 d-flex flex-row justify-content-center align-items-center">
+      <div class="logos overflow-hidden py-5 px-0 position-relative" style="background-color: #fff; white-space: nowrap;">
+        <div class="logos-slide d-inline-block">
+
+            <img src="https://user-images.githubusercontent.com/78242022/284359520-3a125798-774e-423b-b738-5f5e495d276d.png" alt=""><!--Etsy-->
+
+            <img src="https://user-images.githubusercontent.com/78242022/284359525-2779538f-35e0-4727-89fa-04e523624630.png" alt=""><!--Airbnb-->
+
+            <img src="https://user-images.githubusercontent.com/78242022/284359530-00ed0fa5-9752-46df-bc07-4ab5dfe3dded.png" alt=""><!--amazon-->
+
+            <img src="https://user-images.githubusercontent.com/78242022/284359550-db8cbcba-e2ed-48e1-81dc-c396c35893eb.png" alt=""><!--Target-->
+
+            <img src="https://user-images.githubusercontent.com/78242022/284359532-4f2a2b1b-8eb7-4aaa-bda9-7d31df0d5cff.png" alt=""><!--Netflix-->
+
+            <img src="https://user-images.githubusercontent.com/78242022/284359536-909db7c6-660e-495d-9568-c63bdf1fab5d.png" alt=""><!--Nasa-->
+
+            <img src="https://user-images.githubusercontent.com/78242022/284359540-ba6f0359-617b-4e69-9b02-5137a6063738.png" alt=""><!--Shopify-->
+
+            <img src="https://user-images.githubusercontent.com/78242022/284359552-631b683f-859c-44e5-991f-23ff98110083.png" alt=""><!--Uber-->
+
+            <img src="https://user-images.githubusercontent.com/78242022/284359544-ccf33abb-f245-4c29-8f79-997e3eb206ee.png" alt=""><!--Slack-->
+
+            <img src="https://user-images.githubusercontent.com/78242022/284363043-89f1bbc4-b919-4231-8b62-679785a2f20c.png" alt=""><!--Google-->
+
+            <img src="https://user-images.githubusercontent.com/78242022/284359560-9b7336a9-0dff-41c0-8f94-0a3ef06b679d.png" alt=""><!--Walmark-->
+        </div>
+    </div>
+  </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<script>
+  const cloneEl = document.querySelector(".logos-slide").cloneNode(true)
+  const logos = document.querySelector('.logos').appendChild(cloneEl);
+</script>
+  </body>
+</html>

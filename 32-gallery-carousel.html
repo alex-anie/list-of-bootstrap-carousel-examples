@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Owl Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- External Owl Carousel CSS CDN Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+    <style>
+      /* Text Transitions */
+      .owl-carousel h2 {
+        opacity: 0.2;
+		    -webkit-transform: translateY(130px);
+		    transform: translateY(130px);
+		    -webkit-transition: all 0.3s linear 0.2s;
+		    -moz-transition: all 0.3s linear 0.2s;
+		    transition: all 0.3s linear 0.2s;
+		}
+
+		.owl-carousel .owl-item.active h2 {
+      opacity: 1;
+		  -webkit-transform: translateY(0px); 
+		  transform: translateY(0px);
+    }
+
+    .owl-carousel p {
+        opacity: 0.2;
+		    -webkit-transform: translateY(130px);
+		    transform: translateY(130px);
+		    -webkit-transition: all 0.3s linear 0.5s;
+		    -moz-transition: all 0.3s linear 0.5s;
+		    transition: all 0.3s linear 0.5s;
+		}
+
+		.owl-carousel .owl-item.active p {
+      opacity: 1;
+		  -webkit-transform: translateY(0px); 
+		  transform: translateY(0px);
+    }
+
+    .item {
+      /* width: 100;
+      display: block; */
+      background-color: red;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    </style>
+<body>
+    <div class="container px-4 py-5 position-relative" id="custom-cards">
+
+        <div class="">
+            <ul class="d-flex gap-4 list-unstyled rounded-pill bg-light shadow-lg py-4 px-5 position-fixed" style="top: 20px; left: 30%; z-index: 10; ">
+              <li><a href="#" class="text-dark text-decoration-none d-none d-sm-block">Home</a></li>
+              <li><a href="#" class="text-dark text-decoration-none d-none d-sm-block">Services</a></li>
+              <li class="fs-5 text-info">SOOX</li>
+              <li><a href="#" class="text-dark text-decoration-none d-none d-sm-block">Career</a></li>
+              <li><i class="fa-solid fa-bars d-inline-block px-4"></i></li>
+            </ul>
+        </div>
+
+        <div class="owl-carousel owl-theme position-relative">
+            <div class="item item1 vw-100 vh-100" style="background-image:url('https://user-images.githubusercontent.com/78242022/285054171-22d3e31b-0128-4314-a1ed-4771f8a76dae.jpg');">
+              
+            </div><!--[End of Item one]-->
+
+            <div class="item item2  vw-100 vh-100" style="background-image:url('https://user-images.githubusercontent.com/78242022/285054177-a2d06ce9-245a-4e8e-ac26-4af64fc06975.jpg');">
+              
+            </div><!--[End of Item two]-->
+              
+            <div class="item item3 vw-100 vh-100" style="background-image:url('https://user-images.githubusercontent.com/78242022/285054161-ec676d07-7496-4885-bbb1-9ec4ed4d8d6f.jpg');">
+              
+            </div><!--[End of Item three]-->
+
+            <div class="item item4 vw-100 vh-100" style="background-image:url('https://user-images.githubusercontent.com/78242022/285054165-d35b2d00-cd5c-4688-9014-e2c550f96ed4.jpg');">
+            
+          </div><!--[End of Item three]-->
+        </div>
+
+        <button class="btn d-flex flex-row justify-content-center w-100">
+          <a href="#" class="text-light py-2 px-3 rounded-4 bg-success text-uppercase fs-6 text-decoration-none">More about us</a>
+      </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Owl JavaScript Min CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+});
+    </script>
+  </body>
+</html>

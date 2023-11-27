@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Owl Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- External Owl Carousel CSS CDN Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+    <style>
+
+/* #carouselExample {
+        width: 100vw;
+        height: 100vh;
+
+        display: grid;
+        place-items: center;
+      } */
+
+      /* img {
+        width: 10px;
+      }  */
+
+      /* .cus-carousel-inner {
+        width: 60%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        flex-flow: nowrap;
+      } */
+/* 
+      .cus-carousel-item {
+        width: 100%;
+        border: 2px solid red;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-flow: nowrap;
+      } */
+      
+      .cus-carousel-item {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 10px;
+        color: #fff;
+        width: 40%;
+        min-width: 10%;
+        height: 300px;
+        border: 5px solid rgb(172, 173, 172);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 200px;
+        border-radius: 20px;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .cus-carousel-item::before {
+        content: '';
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        background:linear-gradient(to bottom, #fff, #000);
+        border-radius: inherit;
+        mix-blend-mode: multiply;
+        transition: all 0.7s ease;
+      }
+
+      .cus-carousel-item:hover::before {
+        mix-blend-mode: soft-light;
+      }
+      
+      .cus-carousel-item:hover {
+        width: 100%;
+        background-size: 500px;
+      }
+
+      h1 {
+        font-size: 1.2em;
+        text-transform: uppercase;
+        writing-mode:vertical-rl;
+        transition: all 0.5s ease;
+      }
+
+      p {
+        opacity: 0;
+        transition: all 0.5s ease;
+        padding: 2px 10px;
+        border-radius: 10px;
+      }
+
+      .cus-carousel-item:hover p {
+          background-color: yellow;
+          color: #000;
+          opacity: 1;
+      }
+
+      .cus-carousel-item:hover h1 {
+        writing-mode:initial;
+      }
+
+      .carousel-control button {
+        background-color: black;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+      }
+
+        /* ****************** */
+        /* Indicators */
+        .owl-theme .owl-dots .owl-dot.active span, 
+        .owl-theme .owl-dots .owl-dot:hover span {
+            background:  orange;
+            width: 30px;
+        }
+
+        .owl-theme .owl-dots .owl-dot span {
+            width: 15px;
+            height: 15px;
+            background: orangered;
+            transition: all .2s ease;
+        }
+
+        /* Controls */
+        /* button element */
+        .owl-carousel .owl-nav button.owl-next, 
+        .owl-carousel .owl-nav button.owl-prev {
+            position: relative;
+            background-color: rgba(255, 166, 0, 0.3);
+            width: 30px;
+            padding: 5px;
+        }
+
+        .owl-carousel .owl-nav button.owl-next:hover, 
+        .owl-carousel .owl-nav button.owl-prev:hover {
+            background-color: orange;
+        }
+
+        .owl-carousel .owl-nav button.owl-next::before, 
+        .owl-carousel .owl-nav button.owl-prev::before {
+            width: 100%;
+            height: 100%;
+            color: orangered;
+        }
+
+        .owl-carousel .owl-nav button.owl-next::before {
+            content:'\f061'; /*unicode for arrow-right*/
+            font-family: 'Font Awesome 5 Free'; /* Font family for Font Awesome */
+            font-weight: 900; /* Font weight for the solid style (fas) */
+            margin-right: 5px; 
+        }
+
+        .owl-carousel .owl-nav button.owl-prev::before {
+            content:'\f060'; /*unicode for arrow-left*/
+            font-family: 'Font Awesome 5 Free'; /* Font family for Font Awesome */
+            font-weight: 900; /* Font weight for the solid style (fas) */
+            margin-right: 5px; 
+        }
+
+        .owl-carousel .owl-nav .owl-next [aria-label="Next"], 
+        .owl-carousel .owl-nav .owl-prev [aria-label="Previous"]{
+            visibility:hidden ; /*The Span element*/
+        }
+</style>
+<body style="background-color: rgb(212, 214, 213);">
+    <div class="container px-4 py-5" id="custom-cards">
+        <div class="owl-carousel owl-theme">
+            <div class="item item1 cus-carousel-item" style="background-image:url(https://user-images.githubusercontent.com/78242022/283794539-fc01d463-7bad-4887-a02a-2b9c3eed891f.jpg);">
+                <!-- <div class="cus-carousel-item" > -->
+                    <div class="details">
+                        <h1>Sam Iyke</h1>
+                        <p>UI/UX Designer</p>
+                    </div>
+                  <!-- </div> -->
+                  <!--[Carousel-item-1]-->
+            </div><!--[End of Item one]-->
+
+            <div class="item item2 cus-carousel-item" style="background-image: url(https://user-images.githubusercontent.com/78242022/283794566-f2111e6a-b8be-47c0-a12f-d4db30793ebf.jpg);">
+                <!-- <div class="cus-carousel-item" > -->
+                    <div class="details">
+                        <h1>Samk Ike</h1>
+                        <p>Flutter Developer</p>
+                    </div>
+                <!-- </div> -->
+                <!--[Carousel-item-2]-->
+            </div><!--[End of Item two]-->
+
+            <div class="item item3 cus-carousel-item" style="background-image:url('https://user-images.githubusercontent.com/78242022/284521160-c15935bb-4068-4160-a68a-b339d6f4b389.jpg');">
+                <!-- <div class="cus-carousel-item" > -->
+                    <div class="details">
+                        <h1>JiJi Caski</h1>
+                        <p>Writer</p>
+                    </div>
+                <!-- </div> -->
+                <!--[Carousel-item-3]-->
+            </div><!--[End of Item three]-->
+
+            <div class="item item4 cus-carousel-item" style="background-image:url('https://user-images.githubusercontent.com/78242022/284521137-4e4c6ed9-1a9a-4ac6-9c12-4b76136e939e.jpg');">
+                <!-- <div class="cus-carousel-item" > -->
+                    <div class="details">
+                        <h1>Pink Tylor</h1>
+                        <p>CEO/Founder</p>
+                    </div>
+                  <!-- </div> -->
+                  <!--[Carousel-item-4]-->
+            </div><!--[End of Item four]-->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Owl JavaScript Min CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+});
+    </script>
+  </body>
+</html>
